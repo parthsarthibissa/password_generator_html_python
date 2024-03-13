@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Password Generator
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Password Generator</h2>
+        <form>
+            <div class="user-box">
+                <input min="1" value="3" placeholder="Enter password length" id="length_input" type="number">
+            </div>
+            <select id="password_type">
+                <option value="number">Number Only</option>
+                <option value="characters">Characters Only</option>
+                <option value="mixed">Mixed</option>
+            </select>
+            <div class="outputBox" id="output" title="Password">
+
+            </div>
+            <a py-click="generate_password">
+                GENERATE MY PASSWORD
+            </a>
+        </form>
+    </div>
+    <script type="py" src="./pyfile.py" config="./pyscript.json"></script>
+</body>
+</html>
